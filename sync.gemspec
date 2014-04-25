@@ -21,9 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'minitest', '< 5.0.0'
-  s.add_development_dependency 'mongoid','~> 4', github: 'mongoid/mongoid', ref: '9b3bc1264032209b7a6c0e82d0ca656f401e476b'
-  s.required_rubygems_version = ">= 1.3.4"
-  
-  
+  s.add_development_dependency 'mongoid','~> 4'
+  s.required_rubygems_version = ">= 1.3.4" 
   
 end

@@ -7,9 +7,9 @@ module Sync
       Sync.load_config(path, Rails.env) if path.exist?
     end
 
-    initializer "sync.activerecord" do
-      ActiveRecord::Base.send :extend, Model::ClassMethods
-    end
+    #initializer "sync.activerecord" do
+    #  ActiveRecord::Base.send :extend, Model::ClassMethods
+    #end
     
     if(defined? ActiveRecord)
        initializer "sync.activerecord" do

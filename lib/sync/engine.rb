@@ -11,16 +11,9 @@ module Sync
     #  ActiveRecord::Base.send :extend, Model::ClassMethods
     #end
     
-    if(defined? ActiveRecord)
-       initializer "sync.activerecord" do
-          ActiveRecord::Base.send :extend, Model::ClassMethods
-       end
-    elsif(defined? Mongoid)
-       initializer "sync.mongoid" do
-          Mongoid::Document.send :extend, Model::ClassMethods
-       end
+    initializer "sync.mongoid" do
+       Mongoid::Document.send :extend, Model::ClassMethods
     end
-
     # Adds the ViewHelpers into ActionView::Base
     initializer "sync.view_helpers" do
       ActionView::Base.send :include, ViewHelpers
